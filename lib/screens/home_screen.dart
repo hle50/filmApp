@@ -22,9 +22,10 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0.0,
             title: Center(
-              child: Text('Cine booking app', style: TextStyle(
-                
-              ),),
+              child: Text(
+                'Cine booking app',
+                style: TextStyle(),
+              ),
             ),
           ),
           body: Center(
@@ -38,19 +39,20 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(
                 color: Theme.of(context).primaryColor,
                 fontWeight: FontWeight.bold,
-                fontSize: 20,              
+                fontSize: 20,
               ),
             ),
             onPressed: () {
               Navigator.push(
-  context,
-  PageRouteBuilder(
-    pageBuilder: (c, a1, a2) => FilmListScreen(),
-    transitionsBuilder: (c, anim, a2, child) => FadeTransition(opacity: anim, child: child),
-    transitionDuration: Duration(milliseconds: 1000),
-  ),
-);
-                // Navigator.of(context).pushNamed(FilmListScreen.routeName);
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (c, a1, a2) => FilmListScreen(),
+                  transitionsBuilder: (c, anim, a2, child) =>
+                      FadeTransition(opacity: anim, child: child),
+                  transitionDuration: Duration(milliseconds: 1000),
+                ),
+              );
+              // Navigator.of(context).pushNamed(FilmListScreen.routeName);
             },
             color: Colors.white,
           )),
